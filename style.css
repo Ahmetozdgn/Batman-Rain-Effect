@@ -1,0 +1,49 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  background: #000;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 200;
+}
+
+.batman {
+  background: #000
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/159368/batman.jpg") 50%
+    50% no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.batman {
+  transition: ease-out 250ms;
+  animation: lightning 6000ms infinite;
+}
+
+@keyframes lightning {
+  0%,
+  100% {
+    filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+  }
+  9.5%,
+  75%,
+  80% {
+    filter: opacity(1) grayscale(0%) contrast(1) brightness(1);
+  }
+}
